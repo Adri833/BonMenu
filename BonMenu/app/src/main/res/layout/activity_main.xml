@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="305dp"
+        android:layout_height="254dp"
+        android:src="@drawable/Logo_BonMenu_sin_fondo"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="39dp" />
+
+    <ImageView
+        android:layout_width="363dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="276dp"
+        android:src="@drawable/Letras_BonMenu"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="24dp" />
+
+    <Button
+        android:layout_width="363dp"
+        android:layout_height="71dp"
+        android:layout_marginBottom="28dp"
+        android:text="@string/login"
+        android:backgroundTint="@color/dark_green"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="24dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="363dp"
+        android:layout_height="71dp"
+        android:text="@string/register"
+        android:backgroundTint="@color/green"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="548dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

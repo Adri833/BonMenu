@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">BonMenu</string>
-
-    <!-- Pagina de register/login -->
-    <string name="login">Iniciar sesión</string>
-    <string name="register">Registrarse</string>
-    <string name="no_account">¿No tienes cuenta? Regístrate aquí</string>
-</resources>

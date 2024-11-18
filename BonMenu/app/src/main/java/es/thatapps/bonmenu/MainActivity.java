@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Navegaciones
     private void openRegisterActivity() {
-       Intent intent = new Intent(this, RegisterActivity.class);
-       startActivity(intent);
+        Intent intent = new Intent(this, RegisterActivity.class);
+        startActivity(intent);
     }
 }

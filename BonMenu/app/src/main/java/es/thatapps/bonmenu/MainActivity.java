@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         registerButton.setOnClickListener(v -> {
-            //openRegisterActivity();
+            openRegisterActivity();
         });
     }
 
@@ -56,8 +56,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // Navegaciones
-    //private void openRegisterActivity() {
-    //    Intent intent = new Intent(this, RegisterActivity.class);
-    //    startActivity(intent);
-    //}
+    private void openRegisterActivity() {
+       Intent intent = new Intent(this, RegisterActivity.class);
+       startActivity(intent);
+    }
 }

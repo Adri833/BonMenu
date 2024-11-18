@@ -8,4 +8,6 @@
     <string name="loginGoogle">Iniciar sesión con Google</string>
     <string name="email">Correo electrónico</string>
     <string name="password">Contraseña</string>
+    <string name="back_button">Volver</string>
+
 </resources>

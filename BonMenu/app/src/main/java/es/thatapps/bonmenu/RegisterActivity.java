@@ -1,6 +1,7 @@
 package es.thatapps.bonmenu;
 
 import android.os.Bundle;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -17,7 +18,14 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         // Variables de los elementos
-        ImageView logo = findViewById(R.id.logo);
+        ImageView logo = findViewById(R.id.logo2);
+
+        ImageButton backButton = findViewById(R.id.backButton);
+        backButton.setOnClickListener(v -> {
+            finish();
+        });
+
+
 
         // URL de la imagenes
         String imageLogo = "https://drive.google.com/uc?export=download&id=1UZWSSZk2axQthSsT6Pm9u3d5g4FhFmau";
@@ -27,5 +35,6 @@ public class RegisterActivity extends AppCompatActivity {
                 .load(imageLogo)
                 //.placeholder(R.drawable.ic_launcher_background)
                 .into(logo);
+
     }
 }

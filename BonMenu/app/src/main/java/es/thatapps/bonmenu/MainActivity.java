@@ -1,12 +1,14 @@
 package es.thatapps.bonmenu;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
+import com.bumptech.glide.Glide;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,10 +17,47 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        // Variables de los elementos
+        ImageView logo = findViewById(R.id.logo);
+        ImageView letras = findViewById(R.id.letras);
+        Button loginButton = findViewById(R.id.loginButton);
+        Button registerButton = findViewById(R.id.registerButton);
+
+
+        // URL de la imagenes
+        String imageLogo = "https://drive.google.com/uc?export=download&id=1UZWSSZk2axQthSsT6Pm9u3d5g4FhFmau";
+        String imageLetras = "https://drive.google.com/uc?export=download&id=1EUtYu-83KLfTggwUfvjezLZCSva1DQio";
+
+        // Carga imagenes con Glide
+        Glide.with(this)
+                .load(imageLogo)
+                //.placeholder(R.drawable.ic_launcher_background)
+                .into(logo);
+
+        Glide.with(this)
+                .load(imageLetras)
+                //.placeholder(R.drawable.ic_launcher_background)
+                .into(letras);
+
+        loginButton.setOnClickListener(v -> {
+            openLoginActivity();
+        });
+
+        registerButton.setOnClickListener(v -> {
+            //openRegisterActivity();
         });
     }
+
+    // Navegaciones
+    private void openLoginActivity() {
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+    }
+
+    // Navegaciones
+    //private void openRegisterActivity() {
+    //    Intent intent = new Intent(this, RegisterActivity.class);
+    //    startActivity(intent);
+    //}
 }

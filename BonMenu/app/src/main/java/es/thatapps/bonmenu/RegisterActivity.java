@@ -21,9 +21,7 @@ public class RegisterActivity extends AppCompatActivity {
         ImageView logo = findViewById(R.id.logo2);
 
         ImageButton backButton = findViewById(R.id.backButton);
-        backButton.setOnClickListener(v -> {
-            finish();
-        });
+        backButton.setOnClickListener(v -> finish());
 
 
 

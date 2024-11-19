@@ -21,10 +21,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Botón Atrás -->
-
-    <!-- Campo de Correo -->
-
     <ImageButton
         android:id="@+id/backButton"
         android:layout_width="36dp"
@@ -79,7 +75,7 @@
         android:layout_width="320dp"
         android:layout_height="62dp"
         android:layout_marginTop="70dp"
-        android:background="@drawable/rounded_button"
+        android:background="@drawable/rounded_button_green"
         android:text="@string/register"
         android:textColor="@android:color/white"
         android:elevation="6dp"

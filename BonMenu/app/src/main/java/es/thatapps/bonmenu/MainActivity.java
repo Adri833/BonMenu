@@ -52,13 +52,11 @@ public class MainActivity extends AppCompatActivity {
 
     // Navegaciones
     private void openLoginActivity() {
-        Intent intent = new Intent(this, LoginActivity.class);
+        Intent intent = new Intent(this, LoginActivity.class); // Navegacion hacia login
         startActivity(intent);
     }
-
-    // Navegaciones
     private void openRegisterActivity() {
-        Intent intent = new Intent(this, RegisterActivity.class);
+        Intent intent = new Intent(this, RegisterActivity.class); // Navegacion hacia register
         startActivity(intent);
     }
 }

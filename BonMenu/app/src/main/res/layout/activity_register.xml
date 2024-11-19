@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="12dp"
-    tools:context=".MainActivity">
+    tools:context=".RegisterActivity">
 
     <!-- Logo -->
     <ImageView
@@ -57,7 +57,7 @@
         android:id="@+id/input_password"
         android:layout_width="320dp"
         android:layout_height="62dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="18dp"
         android:autofillHints="password"
         android:background="@drawable/rounded_edit_text"
         android:elevation="4dp"
@@ -75,9 +75,9 @@
         android:layout_width="320dp"
         android:layout_height="62dp"
         android:layout_marginTop="70dp"
-        android:background="@drawable/rounded_button_green"
         android:text="@string/register"
         android:textColor="@android:color/white"
+        android:backgroundTint="@color/green"
         android:elevation="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

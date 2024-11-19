@@ -10,4 +10,6 @@
     <string name="password">Contraseña</string>
     <string name="back_button">Volver</string>
 
+    <!-- Pagina de home -->
+    <string name="hint_search">Buscar...</string>
 </resources>

@@ -1,5 +1,6 @@
 package es.thatapps.bonmenu;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.widget.Button;
@@ -43,7 +44,7 @@ public class RegisterActivity extends AppCompatActivity {
             String password = input_password.getText().toString().trim();
 
             if (validateInputs(email, password)) {
-                registerUser(email, password);
+                openHomeActivity();
             }
         });
 
@@ -58,6 +59,13 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
+    // Navegaciones
+    private void openHomeActivity() {
+        Intent intent = new Intent(this, HomeActivity.class); // Navegacion hacia home
+        startActivity(intent);
+    }
+
+    // Metodo que registra el usuario en la base de datos
     private void registerUser(String email, String password) {
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
@@ -75,6 +83,7 @@ public class RegisterActivity extends AppCompatActivity {
                 });
     }
 
+    // Metodo que valida los datos introducidos
     private boolean validateInputs(String email, String password) {
         if (email.isEmpty()) {
             Toast.makeText(this, "Por favor, introduce un correo electrónico", Toast.LENGTH_SHORT).show();

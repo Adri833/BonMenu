@@ -43,7 +43,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.337">
+        app:layout_constraintVertical_bias="0.303">
 
         <!-- Iconos y textos en formato de Grid -->
         <GridLayout
@@ -152,7 +152,8 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:contentDescription="Icono Pedidos"
-                    android:src="@drawable/ic_orders" />
+                    android:src="@drawable/ic_orders"
+                    tools:ignore="HardcodedText" />
 
                 <TextView
                     android:layout_width="wrap_content"

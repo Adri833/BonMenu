@@ -10,6 +10,6 @@
 
     <!-- Estilo para el texto del BottomNavigationView -->
     <style name="BottomNavTextStyle" parent="TextAppearance.AppCompat.Caption">
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">12sp</item>
     </style>
 </resources>

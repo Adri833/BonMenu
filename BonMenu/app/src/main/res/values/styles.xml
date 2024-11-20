@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BottomNavigationViewItemStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <!-- Tamaño del ícono -->
+        <item name="itemIconSize">36dp</item>
+        <!-- Tamaño del texto -->
+        <item name="itemTextAppearanceActive">@style/BottomNavTextStyle</item>
+        <item name="itemTextAppearanceInactive">@style/BottomNavTextStyle</item>
+    </style>
+
+    <!-- Estilo para el texto del BottomNavigationView -->
+    <style name="BottomNavTextStyle" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">18sp</item>
+    </style>
+</resources>

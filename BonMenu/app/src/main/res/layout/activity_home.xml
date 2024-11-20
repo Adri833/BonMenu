@@ -79,11 +79,14 @@
                 android:orientation="vertical"
                 android:padding="16dp">
 
-                <ImageView
+                <ImageButton
+                    android:id="@+id/supermarketButton"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:contentDescription="Icono Supermercados"
                     android:src="@drawable/ic_market"
+                    android:scaleType="fitCenter"
+                    android:background="@null"
                     tools:ignore="HardcodedText" />
 
                 <TextView
@@ -106,11 +109,14 @@
                 android:orientation="vertical"
                 android:padding="16dp">
 
-                <ImageView
+                <ImageButton
+                    android:id="@+id/menusButton"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:contentDescription="Icono Menús"
                     android:src="@drawable/ic_menu"
+                    android:scaleType="fitCenter"
+                    android:background="@null"
                     tools:ignore="HardcodedText" />
 
                 <TextView
@@ -133,11 +139,14 @@
                 android:orientation="vertical"
                 android:padding="16dp">
 
-                <ImageView
+                <ImageButton
+                    android:id="@+id/salesButton"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:contentDescription="Icono Ofertas"
                     android:src="@drawable/ic_offer"
+                    android:scaleType="fitCenter"
+                    android:background="@null"
                     tools:ignore="HardcodedText" />
 
                 <TextView
@@ -160,11 +169,14 @@
                 android:orientation="vertical"
                 android:padding="16dp">
 
-                <ImageView
+                <ImageButton
+                    android:id="@+id/ordersButton"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:contentDescription="Icono Pedidos"
                     android:src="@drawable/ic_orders"
+                    android:scaleType="fitCenter"
+                    android:background="@null"
                     tools:ignore="HardcodedText" />
 
                 <TextView

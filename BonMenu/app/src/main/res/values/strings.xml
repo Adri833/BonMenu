@@ -8,4 +8,14 @@
     <string name="loginGoogle">Iniciar sesión con Google</string>
     <string name="email">Correo electrónico</string>
     <string name="password">Contraseña</string>
+    <string name="back_button">Volver</string>
+
+    <!-- Pagina de home -->
+    <string name="hint_search">Buscar...</string>
+    <string name="supermarket">Supermercados</string>
+    <string name="menu">Menús</string>
+    <string name="sales">Ofertas</string>
+    <string name="orders">Pedidos</string>
+    <string name="home">Inicio</string>
+    <string name="settings">Ajustes</string>
 </resources>

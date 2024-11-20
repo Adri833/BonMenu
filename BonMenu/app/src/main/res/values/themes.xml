@@ -1,8 +1,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.BonMenu" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryVariant">@color/green</item>
+        <item name="colorAccent">@color/green</item> <!-- Asegúrate de usar tu verde aquí -->
+        <item name="colorControlHighlight">@android:color/transparent</item> <!-- Evitar efectos no deseados -->
+        <item name="colorButtonNormal">@color/green</item> <!-- Color de los botones -->
     </style>
 
     <style name="Theme.BonMenu" parent="Base.Theme.BonMenu" />

@@ -1,58 +1,86 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:padding="12dp"
+    tools:context=".RegisterActivity">
 
+    <!-- Logo -->
     <ImageView
-        android:id="@+id/logo"
+        android:id="@+id/logo2"
         android:layout_width="226dp"
         android:layout_height="214dp"
         android:layout_marginTop="104dp"
+        android:contentDescription="Logo"
+        android:elevation="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.27"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="260dp"
+        android:background="@null"
+        android:contentDescription="@string/back_button"
+        android:elevation="8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/volver"
+        app:layout_constraintBottom_toBottomOf="@+id/logo2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.022"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <EditText
         android:id="@+id/input_email"
-        android:layout_width="363dp"
-        android:layout_height="71dp"
+        android:layout_width="320dp"
+        android:layout_height="62dp"
         android:layout_marginTop="83dp"
-        android:background="@color/beige"
+        android:autofillHints="emailAddress"
+        android:background="@drawable/rounded_edit_text"
+        android:elevation="4dp"
         android:hint="@string/email"
+        android:inputType="textEmailAddress"
         android:paddingStart="16dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="RtlSymmetry" />
+        app:layout_constraintTop_toBottomOf="@+id/logo2" />
 
+    <!-- Campo de Contraseña -->
     <EditText
         android:id="@+id/input_password"
-        android:layout_width="363dp"
-        android:layout_height="71dp"
-        android:layout_marginTop="20dp"
-        android:background="@color/beige"
+        android:layout_width="320dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="18dp"
+        android:autofillHints="password"
+        android:background="@drawable/rounded_edit_text"
+        android:elevation="4dp"
         android:hint="@string/password"
+        android:inputType="textPassword"
         android:paddingStart="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/input_email"
-        tools:ignore="RtlSymmetry" />
-
-    <Button
-        android:id="@+id/register"
-        android:layout_width="363dp"
-        android:layout_height="71dp"
-        android:layout_marginTop="136dp"
-        android:backgroundTint="@color/green"
-        android:text="@string/register"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_email" />
+
+    <!-- Botón de Registro -->
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="320dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="70dp"
+        android:text="@string/register"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/green"
+        android:elevation="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_password" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

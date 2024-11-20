@@ -39,7 +39,7 @@ public class LoginActivity extends AppCompatActivity {
             String password = input_password.getText().toString().trim();
 
             if (validateInputs(email, password)) {
-                openHomeActivity();
+                openHomeActivity(email); // Pasa el email al siguiente activity
             }
         });
 
@@ -55,8 +55,9 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     // Navegaciones
-    private void openHomeActivity() {
+    private void openHomeActivity(String email) {
         Intent intent = new Intent(this, HomeActivity.class); // Navegacion hacia home
+        intent.putExtra("USER_EMAIL", email); // Pasa el email como extra
         startActivity(intent);
     }
 

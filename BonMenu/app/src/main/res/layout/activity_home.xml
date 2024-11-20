@@ -13,7 +13,8 @@
         android:background="@drawable/rounded_botton_background"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="48dp"
+        android:padding="32dp"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
         <EditText
@@ -23,6 +24,7 @@
             android:layout_weight="1"
             android:background="@drawable/search_backgorund"
             android:drawableStart="@drawable/ic_search"
+            android:drawableEnd="@drawable/ic_cancel"
             android:drawablePadding="8dp"
             android:hint="@string/hint_search"
             android:inputType="text"
@@ -30,6 +32,16 @@
             android:textColor="@color/black"
             android:textSize="16sp"
             tools:ignore="Autofill" />
+
+        <ImageButton
+            android:id="@+id/profileButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:background="@null"
+            android:contentDescription="Icono de avatar para configuraciones de perfil"
+            android:src="@drawable/ic_avatar"
+            tools:ignore="HardcodedText" />
     </LinearLayout>
 
     <LinearLayout
@@ -43,7 +55,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.303">
+        app:layout_constraintVertical_bias="0.251">
 
         <!-- Iconos y textos en formato de Grid -->
         <GridLayout
@@ -174,7 +186,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="@color/light_gray"
+        android:background="@drawable/rounded_top_background"
         app:itemIconTint="@color/black"
         app:itemTextColor="@color/black"
         app:labelVisibilityMode="labeled"
@@ -185,5 +197,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

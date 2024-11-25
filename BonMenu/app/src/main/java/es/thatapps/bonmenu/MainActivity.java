@@ -9,7 +9,6 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
-import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,13 +40,9 @@ public class MainActivity extends AppCompatActivity {
                 //.placeholder(R.drawable.ic_launcher_background)
                 .into(letras);
 
-        loginButton.setOnClickListener(v -> {
-            openLoginActivity();
-        });
+        loginButton.setOnClickListener(v -> openLoginActivity());
 
-        registerButton.setOnClickListener(v -> {
-            openRegisterActivity();
-        });
+        registerButton.setOnClickListener(v -> openRegisterActivity());
     }
 
     // Navegaciones

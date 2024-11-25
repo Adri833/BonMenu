@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
                 //.placeholder(R.drawable.ic_launcher_background)
                 .into(letras);
 
+        // Botones de login y register
         loginButton.setOnClickListener(v -> openLoginActivity());
-
         registerButton.setOnClickListener(v -> openRegisterActivity());
     }
 

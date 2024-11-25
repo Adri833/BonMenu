@@ -18,4 +18,9 @@
     <string name="orders">Pedidos</string>
     <string name="home">Inicio</string>
     <string name="settings">Ajustes</string>
+
+    <!-- Toast -->
+    <string name="toast_error">Error: </string>
+    <string name="toast_register">Usuario registrado con éxito!</string>
+    <string name="toast_login">Inicio de sesión exitoso!</string>
 </resources>

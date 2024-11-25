@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">BonMenu</string>
+
+    <!-- Register/login page -->
+    <string name="login">Log in</string>
+    <string name="register">Register</string>
+    <string name="no_account">Dont have an account? Sign up here</string>
+    <string name="loginGoogle">Log in with Google</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="back_button">Back</string>
+
+    <!-- Home page -->
+    <string name="hint_search">Search...</string>
+    <string name="supermarket">Supermarkets</string>
+    <string name="menu">Menus</string>
+    <string name="sales">Sales</string>
+    <string name="orders">Orders</string>
+    <string name="home">Home</string>
+    <string name="settings">Settings</string>
+
+    <!-- Toast -->
+    <string name="toast_error">Error: </string>
+    <string name="toast_register">User successfully registered!</string>
+    <string name="toast_login">Login successful!</string>
+</resources>

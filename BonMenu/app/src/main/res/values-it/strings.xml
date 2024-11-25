@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">BonMenu</string>
+
+    <!-- Pagina di registrazione/login -->
+    <string name="login">Accedi</string>
+    <string name="register">Registrati</string>
+    <string name="no_account">Non hai un account? Registrati qui</string>
+    <string name="loginGoogle">Accedi con Google</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="back_button">Indietro</string>
+
+    <!-- Pagina principale -->
+    <string name="hint_search">Cerca...</string>
+    <string name="supermarket">Supermercati</string>
+    <string name="menu">Menù</string>
+    <string name="sales">Offerte</string>
+    <string name="orders">Ordini</string>
+    <string name="home">Home</string>
+    <string name="settings">Impostazioni</string>
+
+    <!-- Toast -->
+    <string name="toast_error">Errore: </string>
+    <string name="toast_register">Utente registrato con successo!</string>
+    <string name="toast_login">Accesso effettuato con successo!</string>
+</resources>

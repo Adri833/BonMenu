@@ -12,6 +12,8 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -39,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
             String password = input_password.getText().toString().trim();
 
             if (validateInputs(email, password)) {
-                openHomeActivity(email); // Pasa el email al siguiente activity
+                loginUser(email, password); // Pasa el email al siguiente activity
             }
         });
 
@@ -54,6 +56,26 @@ public class LoginActivity extends AppCompatActivity {
                 .into(logo);
     }
 
+    // Metodo para iniciar sesion con la BBDD
+    private void loginUser(String email, String password) {
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        mAuth.signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener(this, task -> {
+                    if (task.isSuccessful()) {
+                        // Login exitoso
+                        FirebaseUser user = mAuth.getCurrentUser();
+                        if (user != null) {
+                            Toast.makeText(this, R.string.toast_login, Toast.LENGTH_SHORT).show();
+                            openHomeActivity(user.getEmail());
+                        }
+                    } else {
+                        // Error en el login
+                        Toast.makeText(this, R.string.toast_error + task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                    }
+                });
+    }
+
+    // TODO: Este intent se puede borrar pero Juan nos pide que hagamos paso de datos con intent, asique lo dejamos
     // Navegaciones
     private void openHomeActivity(String email) {
         Intent intent = new Intent(this, HomeActivity.class); // Navegacion hacia home

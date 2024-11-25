@@ -8,7 +8,11 @@
     <string name="loginGoogle">Accedi con Google</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
+    <string name="actual_password">Password attuale</string>
+    <string name="new_password">Nuova password</string>
+    <string name="confirm_password">Conferma password</string>
     <string name="back_button">Indietro</string>
+    <string name="save_changes">Salva modifiche</string>
 
     <!-- Pagina principale -->
     <string name="hint_search">Cerca...</string>
@@ -23,4 +27,7 @@
     <string name="toast_error">Errore: </string>
     <string name="toast_register">Utente registrato con successo!</string>
     <string name="toast_login">Accesso effettuato con successo!</string>
+    <string name="toast_password_updated">Password aggiornata con successo</string>
+    <string name="auth_error">Le email o la password non sono corrette</string>
+    <string name="toast_actual_password">La password attuale non corrisponde</string>
 </resources>

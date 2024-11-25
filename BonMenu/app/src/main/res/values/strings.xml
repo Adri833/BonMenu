@@ -8,7 +8,11 @@
     <string name="loginGoogle">Iniciar sesión con Google</string>
     <string name="email">Correo electrónico</string>
     <string name="password">Contraseña</string>
+    <string name="actual_password">Contraseña actual</string>
+    <string name="new_password">Nueva contraseña</string>
+    <string name="confirm_password">Confirmar contraseña</string>
     <string name="back_button">Volver</string>
+    <string name="save_changes">Guardar cambios</string>
 
     <!-- Pagina de home -->
     <string name="hint_search">Buscar...</string>
@@ -18,4 +22,13 @@
     <string name="orders">Pedidos</string>
     <string name="home">Inicio</string>
     <string name="settings">Ajustes</string>
+
+    <!-- Toast -->
+    <string name="toast_error">Error</string>
+    <string name="toast_register">Usuario registrado con éxito!</string>
+    <string name="toast_login">Inicio de sesión exitoso!</string>
+    <string name="toast_password_updated">Contraseña actualizada correctamente</string>
+    <string name="auth_error">El correo electrónica o la contraseña son incorrectos</string>
+    <string name="toast_actual_password">La contraseña actual no coincide</string>
+
 </resources>

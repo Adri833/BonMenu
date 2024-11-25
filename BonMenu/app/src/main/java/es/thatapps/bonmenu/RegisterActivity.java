@@ -2,7 +2,6 @@ package es.thatapps.bonmenu;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -15,7 +14,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
 import java.util.Objects;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -44,7 +42,7 @@ public class RegisterActivity extends AppCompatActivity {
             String password = input_password.getText().toString().trim();
 
             if (validateInputs(email, password)) {
-                openHomeActivity();
+                registerUser(email, password); // Registra el usuario
             }
         });
 
@@ -59,28 +57,31 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
-    // Navegaciones
-    private void openHomeActivity() {
-        Intent intent = new Intent(this, HomeActivity.class); // Navegacion hacia home
-        startActivity(intent);
-    }
-
     // Metodo que registra el usuario en la base de datos
     private void registerUser(String email, String password) {
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
-
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
                         // Registro exitoso
-                        Toast.makeText(this, "Usuario registrado", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(this, R.string.toast_register, Toast.LENGTH_SHORT).show();
                         FirebaseUser user = mAuth.getCurrentUser();
-                        // Puedes navegar a otra actividad si lo necesitas
+                        if (user != null) {
+                            openHomeActivity(user.getEmail());
+                        }
                     } else {
                         // Error en el registro
-                        Toast.makeText(this, "Error: " + Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(this, R.string.toast_error + Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_LONG).show();
                     }
                 });
+    }
+
+    // TODO: Este intent se puede borrar pero Juan nos pide que hagamos paso de datos con intent, asique lo dejamos
+    // Navegaciones
+    private void openHomeActivity(String email) {
+        Intent intent = new Intent(this, HomeActivity.class); // Navegacion hacia home
+        intent.putExtra("USER_EMAIL", email); // Pasa el email como extra
+        startActivity(intent);
     }
 
     // Metodo que valida los datos introducidos

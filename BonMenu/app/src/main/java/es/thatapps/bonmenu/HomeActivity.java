@@ -32,6 +32,10 @@ public class HomeActivity extends AppCompatActivity {
         // Botones de los elementos
         ImageButton supermarketButton = findViewById(R.id.supermarketButton);
         supermarketButton.setOnClickListener(v -> openSupermarketActivity());
+        // Botón de configuraciones
+
+
+
     }
 
     // Navegaciones
@@ -39,4 +43,5 @@ public class HomeActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SupermarketActivity.class); // Navegacion hacia supermarket
         startActivity(intent);
     }
+
 }

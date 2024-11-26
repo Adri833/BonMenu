@@ -47,10 +47,10 @@ public class HomeActivity extends AppCompatActivity {
         ImageButton ordersButton = findViewById(R.id.ordersButton);
 
         // URL de las imagenes
-        String supermarketImage = "https://drive.google.com/uc?id=1q0Uho2D_vjt9FtH2BGkEJ-debVsBtm7e";
-        String salesImage = "https://drive.google.com/uc?id=1IHytUYZyvXrlS0JEGmZKOr9TTJAIG2hD";
-        String menusImage = "https://drive.google.com/uc?id=11JR4ZTUUWfmsNMDlhRHlBrZ4tEmgV9-F";
-        String ordersImage = "https://drive.google.com/uc?id=1QOuYTLETOMM2rPZokG2JidJYXOBO4gMc";
+        String supermarketImage = "https://drive.google.com/uc?export=download&id=1q0Uho2D_vjt9FtH2BGkEJ-debVsBtm7e";
+        String salesImage = "https://drive.google.com/uc?export=download&id=1IHytUYZyvXrlS0JEGmZKOr9TTJAIG2hD";
+        String menusImage = "https://drive.google.com/uc?export=download&id=11JR4ZTUUWfmsNMDlhRHlBrZ4tEmgV9-F";
+        String ordersImage = "https://drive.google.com/uc?export=download&id=1QOuYTLETOMM2rPZokG2JidJYXOBO4gMc";
 
         // Iamgenes con glide
 

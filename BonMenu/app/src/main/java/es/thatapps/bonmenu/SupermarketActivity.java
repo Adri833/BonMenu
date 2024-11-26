@@ -21,6 +21,7 @@ public class SupermarketActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_supermarket);
 
+        // Boton de retroceso
         ImageButton backButton = findViewById(R.id.backButton); // Boton para ir hacia atras
         backButton.setOnClickListener(v -> finish());
 

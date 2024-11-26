@@ -21,6 +21,10 @@ public class ProteinaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_proteina);
 
+        // Boton de retroceso
+        ImageButton backButton = findViewById(R.id.backButton); // Boton para ir hacia atras
+        backButton.setOnClickListener(v -> finish());
+
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 

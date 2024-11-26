@@ -32,4 +32,9 @@
     <string name="toast_actual_password">La contraseña actual no coincide</string>
     <string name="next_update">Disponible próximamente</string>
 
+    <!-- Pagina de menus -->
+    <string name="protein">Proteína</string>
+    <string name="lowCalories">Bajo en calorias</string>
+    <string name="fibre">Fibra</string>
+
 </resources>

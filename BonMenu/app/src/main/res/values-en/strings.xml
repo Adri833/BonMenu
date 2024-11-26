@@ -33,4 +33,9 @@
     <string name="toast_actual_password">The current password does not match</string>
     <string name="next_update">Coming in the next update</string>
 
+    <!-- Menus page -->
+    <string name="protein">Protein</string>
+    <string name="lowCalories">Low in calories</string>
+    <string name="fibre">Fibre</string>
+
 </resources>

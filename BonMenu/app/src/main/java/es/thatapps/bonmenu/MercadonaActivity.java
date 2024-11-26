@@ -1,6 +1,7 @@
 package es.thatapps.bonmenu;
 
 import android.os.Bundle;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,6 +33,8 @@ public class MercadonaActivity extends AppCompatActivity {
         RecyclerView productList = findViewById(R.id.productList);
         productList.setLayoutManager(new GridLayoutManager(this, 2));
 
+        ImageButton backButton = findViewById(R.id.backButton);
+        backButton.setOnClickListener(v -> finish());
         // Lista de productos
         List<Product> products = new ArrayList<>();
         products.add(new Product("Patatas crujientes", "https://drive.google.com/uc?export=download&id=1DKA0eu1GoBsfUUExjVpc8NYA30UuODVW"));

@@ -30,6 +30,7 @@ public class SupermarketActivity extends AppCompatActivity {
 
         // Configura el LayoutManager
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
         // Lista de supermercados
         List<Supermercado> supermercados = new ArrayList<>();
         supermercados.add(new Supermercado("Mercadona", "https://drive.google.com/uc?export=download&id=1vNdzHruoGWO2qqqT3sMoPqIiTmZRR93S"));

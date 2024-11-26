@@ -22,6 +22,9 @@ public class MercadonaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mercadona);
 
+        ImageButton backButton = findViewById(R.id.backButton);
+        backButton.setOnClickListener(v -> finish());
+
         // Imagen del supermercado
         ImageView storeImage = findViewById(R.id.storeImage);
         Glide.with(this)
@@ -33,8 +36,6 @@ public class MercadonaActivity extends AppCompatActivity {
         RecyclerView productList = findViewById(R.id.productList);
         productList.setLayoutManager(new GridLayoutManager(this, 2));
 
-        ImageButton backButton = findViewById(R.id.backButton);
-        backButton.setOnClickListener(v -> finish());
         // Lista de productos
         List<Product> products = new ArrayList<>();
         products.add(new Product("Patatas crujientes", "https://drive.google.com/uc?export=download&id=1DKA0eu1GoBsfUUExjVpc8NYA30UuODVW"));

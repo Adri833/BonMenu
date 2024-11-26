@@ -53,8 +53,6 @@ public class SupermarketAdapter extends RecyclerView.Adapter<SupermarketAdapter.
             if (supermercado.getNombre().equals("Mercadona")) {
                 Intent intent = new Intent(context, MercadonaActivity.class);
                 context.startActivity(intent);
-            } else {
-                // Puedes añadir acciones para otros supermercados
             }
         });
     }

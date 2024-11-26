@@ -3,11 +3,13 @@ package es.thatapps.bonmenu;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
@@ -21,6 +23,13 @@ public class ProteinaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_proteina);
 
+        // Imagen de arriba
+        ImageView headerImage = findViewById(R.id.headerImage);
+        Glide.with(this)
+                .load("https://drive.google.com/uc?export=download&id=1Kg4Rp6x18ibNcR1VgYpd4GtVha7Arer1") // Imagen de la proteina
+                .placeholder(R.drawable.placeholder)
+                .into(headerImage);
+
         // Boton de retroceso
         ImageButton backButton = findViewById(R.id.backButton); // Boton para ir hacia atras
         backButton.setOnClickListener(v -> finish());
@@ -33,7 +42,6 @@ public class ProteinaActivity extends AppCompatActivity {
         platos.add(new Plato("Salmón al horno con ensalada de garbanzos", "Perfecta para una dieta balanceada", R.drawable.ensalada));
         platos.add(new Plato("Huevos revueltos con espinacas", "Rápido y nutritivo", R.drawable.revuelto));
         platos.add(new Plato("Tofu salteado con vegetales", "Opción vegana con mucho sabor", R.drawable.salteado));
-        platos.add(new Plato("Bistec de res con puré de camote", "Clásico y completo", R.drawable.menu_proteico));
 
         PlatoAdapter adapter = new PlatoAdapter(platos, this);
         recyclerView.setAdapter(adapter);

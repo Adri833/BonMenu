@@ -30,4 +30,11 @@
     <string name="toast_password_updated">Password aggiornata con successo</string>
     <string name="auth_error">Le email o la password non sono corrette</string>
     <string name="toast_actual_password">La password attuale non corrisponde</string>
+    <string name="next_update">Prossimamente disponibile</string>
+
+    <!-- Pagina di menus -->
+    <string name="protein">Proteina</string>
+    <string name="lowCalories">Basso in calorie</string>
+    <string name="fibre">Fibra</string>
+
 </resources>

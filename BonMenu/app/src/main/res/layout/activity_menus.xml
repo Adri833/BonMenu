@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingTop="16dp">
+
+    <!-- Boton de retroceso -->
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@null"
+        android:contentDescription="@string/back_button"
+        android:elevation="8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/volver"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Supermercado -->
+    <ImageView
+        android:layout_width="56dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="92dp"
+        android:contentDescription="Carro de la compra"
+        android:src="@drawable/ic_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <!-- Titulo de la pantalla -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/menu"
+        android:textColor="@color/gray"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.076"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backButton" />
+
+    <ImageButton
+        android:id="@+id/proteinButton"
+        android:layout_width="362dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="28dp"
+        android:background="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/protein"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="@+id/proteinButton"
+        app:layout_constraintEnd_toEndOf="@+id/proteinButton"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="@+id/proteinButton"
+        app:layout_constraintTop_toTopOf="@+id/proteinButton"
+        app:layout_constraintVertical_bias="0.533" />
+
+    <ImageButton
+        android:id="@+id/fibreButton"
+        android:layout_width="362dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="24dp"
+        android:background="@null"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lowCaloriesButton" />
+
+    <ImageButton
+        android:id="@+id/lowCaloriesButton"
+        android:layout_width="362dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="24dp"
+        android:background="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/proteinButton" />
+
+    <TextView
+        android:layout_width="216dp"
+        android:layout_height="wrap_content"
+        android:text="@string/lowCalories"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/lowCaloriesButton"
+        app:layout_constraintEnd_toEndOf="@+id/lowCaloriesButton"
+        app:layout_constraintStart_toStartOf="@+id/lowCaloriesButton"
+        app:layout_constraintTop_toTopOf="@+id/lowCaloriesButton" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fibre"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="@+id/fibreButton"
+        app:layout_constraintEnd_toEndOf="@+id/fibreButton"
+        app:layout_constraintStart_toStartOf="@+id/fibreButton"
+        app:layout_constraintTop_toTopOf="@+id/fibreButton" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/rounded_top_background"
+        app:itemIconSize="32dp"
+        app:itemIconTint="@color/black"
+        app:itemTextAppearanceActive="@style/BottomNavTextStyle"
+        app:itemTextAppearanceInactive="@style/BottomNavTextStyle"
+        app:itemTextColor="@color/black"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

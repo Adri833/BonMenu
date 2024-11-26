@@ -26,8 +26,9 @@ public class LoginActivity extends AppCompatActivity {
         // Variables de los elementos
         ImageView logo = findViewById(R.id.logo);
 
+        // Boton de retroceso
         ImageButton backButton = findViewById(R.id.backButton); // Boton para ir hacia atras
-        backButton.setOnClickListener(v -> finish());
+        backButton.setOnClickListener(v -> openMainActivity());
 
         // Email y contrasña introducidos
         EditText input_email = findViewById(R.id.input_email);
@@ -75,11 +76,14 @@ public class LoginActivity extends AppCompatActivity {
                 });
     }
 
-    // TODO: Este intent se puede borrar pero Juan nos pide que hagamos paso de datos con intent, asique lo dejamos
     // Navegaciones
     private void openHomeActivity(String email) {
         Intent intent = new Intent(this, HomeActivity.class); // Navegacion hacia home
-        intent.putExtra("USER_EMAIL", email); // Pasa el email como extra
+        startActivity(intent);
+    }
+
+    public void openMainActivity() {
+        Intent intent = new Intent(this, MainActivity.class); // Navegacion hacia login
         startActivity(intent);
     }
 

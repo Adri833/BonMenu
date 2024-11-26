@@ -1,0 +1,51 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:background="?attr/selectableItemBackground">
+
+    <!-- Imagen del plato -->
+    <ImageView
+        android:id="@+id/platoImage"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="Imagen del plato" />
+
+    <!-- Información del plato -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/platoName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre del plato"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/platoDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descripción breve del plato"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray" />
+    </LinearLayout>
+
+    <!-- Flecha al final -->
+    <ImageView
+        android:id="@+id/arrowIcon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/arrow2"
+        android:contentDescription="Icono de flecha" />
+</LinearLayout>

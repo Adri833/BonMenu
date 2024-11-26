@@ -23,7 +23,6 @@
             android:layout_marginTop="44dp"
             android:layout_marginBottom="16dp"
             android:contentDescription="Logo de la aplicación"
-            android:src="@drawable/logo_bonmenu_sin_fondo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.471"
             app:layout_constraintStart_toStartOf="parent"

@@ -5,12 +5,14 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.EmailAuthProvider;
@@ -26,6 +28,15 @@ public class SettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_settings);
+
+        // Cargar logo con glide
+        String imageLogo = "https://drive.google.com/uc?export=download&id=1UZWSSZk2axQthSsT6Pm9u3d5g4FhFmau";
+        ImageView logo = findViewById(R.id.logo);
+
+        Glide.with(this)
+                .load(imageLogo)
+                .placeholder(R.drawable.placeholder)
+                .into(logo);
 
         // Inicializar Firebase Auth
         firebaseAuth = FirebaseAuth.getInstance();

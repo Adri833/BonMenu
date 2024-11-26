@@ -30,5 +30,6 @@
     <string name="toast_password_updated">Contraseña actualizada correctamente</string>
     <string name="auth_error">El correo electrónica o la contraseña son incorrectos</string>
     <string name="toast_actual_password">La contraseña actual no coincide</string>
+    <string name="next_update">Disponible próximamente</string>
 
 </resources>

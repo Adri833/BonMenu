@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".HomeActivity">
 
     <LinearLayout
@@ -17,21 +18,41 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
 
-        <EditText
-            android:id="@+id/seachBar"
+        <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="48dp"
-            android:layout_weight="1"
-            android:background="@drawable/search_backgorund"
-            android:drawableStart="@drawable/ic_search"
-            android:drawableEnd="@drawable/ic_cancel"
-            android:drawablePadding="8dp"
-            android:hint="@string/hint_search"
-            android:inputType="text"
-            android:padding="12dp"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            tools:ignore="Autofill" />
+            android:layout_weight="1">
+
+            <EditText
+                android:id="@+id/searchBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/search_backgorund"
+                android:drawableStart="@drawable/ic_search"
+                android:drawablePadding="8dp"
+                android:hint="@string/hint_search"
+                android:inputType="text"
+                android:paddingStart="12dp"
+                android:paddingEnd="48dp"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                tools:ignore="Autofill" />
+
+            <ImageButton
+                android:id="@+id/eraseButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="11dp"
+                android:layout_marginBottom="12dp"
+                android:background="@null"
+                android:contentDescription="Icono para limpiar la barra de búsqueda"
+                android:src="@drawable/ic_cancel"
+                tools:ignore="HardcodedText" />
+        </RelativeLayout>
 
         <ImageButton
             android:id="@+id/profileButton"
@@ -43,6 +64,7 @@
             android:src="@drawable/ic_avatar"
             tools:ignore="HardcodedText" />
     </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -84,7 +106,6 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:contentDescription="Icono Supermercados"
-                    android:src="@drawable/ic_market"
                     android:scaleType="fitCenter"
                     android:background="@null"
                     tools:ignore="HardcodedText" />
@@ -114,7 +135,6 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:contentDescription="Icono Menús"
-                    android:src="@drawable/ic_menu"
                     android:scaleType="fitCenter"
                     android:background="@null"
                     tools:ignore="HardcodedText" />
@@ -144,7 +164,6 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:contentDescription="Icono Ofertas"
-                    android:src="@drawable/ic_offer"
                     android:scaleType="fitCenter"
                     android:background="@null"
                     tools:ignore="HardcodedText" />
@@ -174,7 +193,6 @@
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:contentDescription="Icono Pedidos"
-                    android:src="@drawable/ic_orders"
                     android:scaleType="fitCenter"
                     android:background="@null"
                     tools:ignore="HardcodedText" />

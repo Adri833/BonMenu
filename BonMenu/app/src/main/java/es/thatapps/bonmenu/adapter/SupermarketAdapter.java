@@ -37,7 +37,10 @@ public class SupermarketAdapter extends RecyclerView.Adapter<SupermarketAdapter.
         Supermercado supermercado = supermercados.get(position);
 
         holder.nombre.setText(supermercado.getNombre());
-        Glide.with(context).load(supermercado.getImagenUrl()).into(holder.imagen); // Carga las imagenes con Glide
+        Glide.with(context)
+                .load(supermercado.getImagenUrl())
+                .placeholder(R.drawable.placeholder)
+                .into(holder.imagen); // Carga las imagenes con Glide
     }
 
     // Devuelve el tamaño de la lista

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         ImageView letras = findViewById(R.id.letras);
         Button loginButton = findViewById(R.id.loginButton);
         Button registerButton = findViewById(R.id.registerButton);
-
+        Button googleButton = findViewById(R.id.googleButton);
 
         // URL de la imagenes
         String imageLogo = "https://drive.google.com/uc?export=download&id=1UZWSSZk2axQthSsT6Pm9u3d5g4FhFmau";
@@ -32,17 +33,18 @@ public class MainActivity extends AppCompatActivity {
         // Carga imagenes con Glide
         Glide.with(this)
                 .load(imageLogo)
-                //.placeholder(R.drawable.ic_launcher_background)
+                .placeholder(R.drawable.placeholder)
                 .into(logo);
 
         Glide.with(this)
                 .load(imageLetras)
-                //.placeholder(R.drawable.ic_launcher_background)
+                .placeholder(R.drawable.placeholder)
                 .into(letras);
 
         // Botones de login y register
         loginButton.setOnClickListener(v -> openLoginActivity());
         registerButton.setOnClickListener(v -> openRegisterActivity());
+        googleButton.setOnClickListener(v -> Toast.makeText(this, R.string.next_update, Toast.LENGTH_SHORT).show());
     }
 
     // Navegaciones

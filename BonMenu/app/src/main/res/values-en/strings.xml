@@ -31,5 +31,6 @@
     <string name="toast_password_updated">Password updated successfully</string>
     <string name="auth_error">The email or password is incorrect</string>
     <string name="toast_actual_password">The current password does not match</string>
+    <string name="next_update">Coming in the next update</string>
 
 </resources>

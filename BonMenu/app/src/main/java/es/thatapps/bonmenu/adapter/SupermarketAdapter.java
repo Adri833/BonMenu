@@ -43,6 +43,7 @@ public class SupermarketAdapter extends RecyclerView.Adapter<SupermarketAdapter.
                 .into(holder.imagen); // Carga las imagenes con Glide
     }
 
+
     // Devuelve el tamaño de la lista
     @Override
     public int getItemCount() {
@@ -58,5 +59,6 @@ public class SupermarketAdapter extends RecyclerView.Adapter<SupermarketAdapter.
             nombre = itemView.findViewById(R.id.supermarketName);
             imagen = itemView.findViewById(R.id.supermarketImage);
         }
+
     }
 }
